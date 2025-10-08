@@ -1,3 +1,17 @@
+
+# Free Internet On OpenWrt OS
+
+Free and Open Internet for All
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![GitHub last commit](https://img.shields.io/github/last-commit/saeedkefayati/free-internet)
+![GitHub top language](https://img.shields.io/github/languages/top/saeedkefayati/free-internet)
+![GitHub repo size](https://img.shields.io/github/repo-size/saeedkefayati/free-internet)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/saeedkefayati/free-internet)
+
+
+<br/>
+
 <figure>
   <pre role="img" aria-label="ASCII BANNER" style="text-align:center; font-size:0.75rem;">
 .--------------------------------------------------------------------------------.
@@ -13,13 +27,8 @@
   </pre>
 </figure>
 
-# Free Internet On OpenWrt OS
 
-Free and Open Internet for All
-
-<br/>
-
-## Smart Installation
+## Smart Installation (Recommend)
 
 1. Install Dependencies<br/>
 ```bash
@@ -118,9 +127,3 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 ## Authors
 
 - [@saeedkefayati](https://www.github.com/saeedkefayati)
-
-<br/>
-
-## Badges
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
