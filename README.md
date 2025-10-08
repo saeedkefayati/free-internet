@@ -17,10 +17,11 @@
 
 Free and Open Internet for All
 
+<br/>
 
 ## Smart Installation
 
-1. Install Dependencies
+1. Install Dependencies<br/>
 ```bash
   opkg install git
 ```
@@ -30,8 +31,7 @@ Free and Open Internet for All
 ```
 
 
-2. Usage with this command
-
+2. Usage with this command<br/>
 - Github:
 ```bash
 sh <(wget -qO- https://raw.githubusercontent.com/saeedkefayati/free-internet/main/install.sh)
@@ -52,10 +52,11 @@ sh <(wget -qO- https://cdn.jsdelivr.net/gh/saeedkefayati/free-internet@main/inst
 sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/install.sh)
 ```
 
+<br/>
 
 ## Manual Installation
 
-1. Install Dependencies
+1. Install Dependencies<br/>
 ```bash
   cd /root
 ```
@@ -67,7 +68,7 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 ```
 
 
-2. Unzip Dependencies
+2. Unzip Dependencies<br/>
 ```bash
   unzip free-internet.zip && rm -rf free-internet.zip
 ```
@@ -75,7 +76,7 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
   mv free-internet-main free-internet
 ```
 
-3. Executable Dependencies
+3. Executable Dependencies<br/>
 ```bash
   find ./free-internet -type f -name "*.sh" -exec chmod +x {} \;
 ```
@@ -83,12 +84,13 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
   cd free-internet && ./main.sh
 ```
 
-4. Add Shortcut Command (optional) - can use free-internet command 
+4. Add Shortcut Command (optional) - can use free-internet command<br/>
 ```bash
   echo '#!/bin/sh' > /usr/bin/free-internet && echo 'cd /root/free-internet && ./main.sh' >> /usr/bin/free-internet && chmod +x /usr/bin/free-internet
 ```
 
-    
+<br/>
+
 ## Module Project
 
 - [Passwall1](https://github.com/saeedkefayati/passwall1)
@@ -97,11 +99,13 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 
 - [V2rayA](https://github.com/saeedkefayati/v2raya)
 
+<br/>
 
 ## Features
 
 - Passwall
 
+<br/>
 
 ## Roadmap
 
@@ -109,11 +113,13 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 - Passwall2
 - V2rayA
 
+<br/>
 
 ## Authors
 
 - [@saeedkefayati](https://www.github.com/saeedkefayati)
 
+<br/>
 
 ## Badges
 
