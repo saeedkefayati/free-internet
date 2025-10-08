@@ -8,7 +8,8 @@ sh <(wget -qO- https://raw.githubusercontent.com/saeedkefayati/free-internet/mai
 ```
 
 
-<pre style="font-family: monospace; font-size:12px;">
+<figure>
+  <pre role="img" aria-label="ASCII BANNER" style="color: red; font-size:0.25rem;">
 .--------------------------------------------------------------------------------.
 |                                                                                |
 |                                                                                |
@@ -19,4 +20,6 @@ sh <(wget -qO- https://raw.githubusercontent.com/saeedkefayati/free-internet/mai
 |                                                                                |
 |                                                                                |
 '--------------------------------------------------------------------------------'
-</pre>
+  </pre>
+  <figcaption id="banner-caption"> Free and Open Internet for All </figcaption>
+</figure>
