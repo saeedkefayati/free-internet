@@ -18,9 +18,9 @@
 Free and Open Internet for All
 
 
-## Install Dependencies
+## Smart Installation
 
-
+1. Install Dependencies
 ```bash
   opkg install git
 ```
@@ -30,11 +30,7 @@ Free and Open Internet for All
 ```
 
 
-## Smart Installation
-
-Usage with this command
-
-
+2. Usage with this command
 Github:
 ```bash
 sh <(wget -qO- https://raw.githubusercontent.com/saeedkefayati/free-internet/main/install.sh)
@@ -56,6 +52,41 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 ```
 
 
+## Manual Installation
+
+1. Install Dependencies
+```bash
+  cd /root
+```
+```bash
+  wget -O free-internet.zip https://github.com/saeedkefayati/free-internet/archive/refs/heads/main.zip
+```
+```bash
+  opkg install unzip
+```
+
+
+2. Unzip Dependencies
+```bash
+  unzip free-internet.zip && rm -rf free-internet.zip
+```
+```bash
+  mv free-internet-main free-internet
+```
+
+3. Executable Dependencies
+```bash
+  find ./free-internet -type f -name "*.sh" -exec chmod +x {} \;
+```
+```bash
+  cd free-internet && ./main.sh
+```
+
+4. Add Shortcut Command (optional) - can use free-internet command 
+```bash
+  echo '#!/bin/sh' > /usr/bin/free-internet && echo 'cd /root/free-internet && ./main.sh' >> /usr/bin/free-internet && chmod +x /usr/bin/free-internet
+```
+
     
 ## Module Project
 
@@ -65,10 +96,10 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 
 - [V2rayA](https://github.com/saeedkefayati/v2raya)
 
+
 ## Features
 
 - Passwall
-
 
 
 ## Roadmap
