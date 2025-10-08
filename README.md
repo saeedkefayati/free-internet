@@ -31,22 +31,23 @@ Free and Open Internet for All
 
 
 2. Usage with this command
-Github:
+
+- Github:
 ```bash
 sh <(wget -qO- https://raw.githubusercontent.com/saeedkefayati/free-internet/main/install.sh)
 ```
 
-Githack:
+- Githack:
 ```bash
 sh <(wget -qO- https://raw.githack.com/saeedkefayati/free-internet/main/install.sh)
 ```
 
-jsdelivr CDN:
+- jsdelivr CDN:
 ```bash
 sh <(wget -qO- https://cdn.jsdelivr.net/gh/saeedkefayati/free-internet@main/install.sh)
 ```
 
-statically CDN
+- statically CDN
 ```bash
 sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/install.sh)
 ```
