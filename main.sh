@@ -30,10 +30,7 @@ do
 
     case "$choice" in
         1)
-            prepare_tool "passwall1" "$PASSWALL_REPO"
-            sh "$TOOLS_DIR/passwall1/install.sh"
-            printf "\nPress Enter to continue..."
-            read dummy
+            check_and_prepare_tool "passwall1" "$PASSWALL_REPO"
             ;;
         2)
             warn "This feature will be added soon."

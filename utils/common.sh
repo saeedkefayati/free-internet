@@ -70,12 +70,12 @@ show_banner() {
 # -------------------------------
 # Prepare a tool
 # -------------------------------
-prepare_tool() {
+check_and_prepare_tool() {
     name="$1"
     repo="$2"
-    dir="$TOOLS_DIR/$name"
+    dir="$FREE_INTERNET_INSTALL_DIR/$name"
 
-    [ -d "$TOOLS_DIR" ] || mkdir -p "$TOOLS_DIR"
+    [ -d "$FREE_INTERNET_INSTALL_DIR" ] || mkdir -p "$FREE_INTERNET_INSTALL_DIR"
 
     if [ ! -d "$dir" ]; then
         info "Cloning $name into $dir ..."
@@ -86,6 +86,13 @@ prepare_tool() {
         git -C "$dir" clean -fd || { error "Failed to clean $name"; exit 1; }
         git -C "$dir" pull || { error "Failed to pull $name"; exit 1; }
     fi
-    
+
+
+    if [ -f "$dir/install.sh" ]; then
+        sh "$dir/install.sh"
+    else
+        warn "No install.sh found for $name, skipping execution."
+    fi
+
     success "Cloning $name into $dir successfully!"
 }
