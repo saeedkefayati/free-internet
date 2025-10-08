@@ -63,6 +63,7 @@ clear_terminal() {
 show_banner() {
     cat ./banner.txt
     echo ""
+    echo "         Now you can use '${FREE_INTERNET_COMMAND}' command      "
     echo "-----------------------------------------------------"
 }
 
