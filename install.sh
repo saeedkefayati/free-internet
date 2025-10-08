@@ -10,6 +10,7 @@
 # ================================
 FREE_INTERNET_INSTALL_DIR="/root/free-internet"
 FREE_INTERNET_REPO_URL="https://github.com/saeedkefayati/free-internet.git"
+FREE_INTERNET_BIN_DIR="/usr/bin/free-internet"
 FREE_INTERNET_COMMAND="free-internet"
 
 # ================================
