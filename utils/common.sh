@@ -73,14 +73,19 @@ show_banner() {
 prepare_tool() {
     name="$1"
     repo="$2"
+    dir="$TOOLS_DIR/$name"
 
     [ -d "$TOOLS_DIR" ] || mkdir -p "$TOOLS_DIR"
 
-    if [ ! -d "$TOOLS_DIR/$name" ]; then
-        info "Cloning $name ..."
-        git clone "$repo" "$TOOLS_DIR/$name"
+    if [ ! -d "$dir" ]; then
+        info "Cloning $name into $dir ..."
+        git clone "$repo" "$dir" || { error "Failed to clone $name"; exit 1; }
     else
-        info "$name already exists. Updating..."
-        (cd "$TOOLS_DIR/$name" && git pull)
+        info "$name already exists. Resetting and updating..."
+        git -C "$dir" reset --hard || { error "Failed to reset $name"; exit 1; }
+        git -C "$dir" clean -fd || { error "Failed to clean $name"; exit 1; }
+        git -C "$dir" pull || { error "Failed to pull $name"; exit 1; }
     fi
+    
+    success "Cloning $name into $dir successfully!"
 }
