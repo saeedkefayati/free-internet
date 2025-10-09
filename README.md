@@ -118,9 +118,3 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 - ~~Passwall~~
 - Passwall2
 - V2rayA
-
-<br/>
-
-## Authors
-
-- [@saeedkefayati](https://www.github.com/saeedkefayati)
