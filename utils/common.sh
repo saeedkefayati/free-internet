@@ -28,7 +28,7 @@ error()   { printf "%b\n" "${RED}[ERROR]${NC} $1"; }
 
 
 #----------------------------------------
-# Check if dependecy exists
+# Check if dependency exists
 #----------------------------------------
 check_command() {
     cmd="$1"
@@ -37,6 +37,7 @@ check_command() {
         info "Command '$cmd' found."
     else
         error "Required command '$cmd' not found. Please install it."
+        return 1
     fi
 }
 
@@ -87,11 +88,11 @@ show_separator() {
 # -------------------------------
 show_shortcut() {
     banner_width=$(wc -L < ./banner.txt)
-
-    text="Now you can use '${FREE_INTERNET_COMMAND}' command"
-    text_len=${#text}
-
+    
+    text_to_center="$1"
+    text_len=${#text_to_center}
+    
     padding=$(( (banner_width - text_len) / 2 ))
-
-    printf "%*s%s\n" "$padding" "" "$text"
+    
+    printf "%*s%s\n" "$padding" "" "$text_to_center"
 }

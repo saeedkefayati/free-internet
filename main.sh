@@ -11,6 +11,7 @@
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 . "${SCRIPT_DIR}/config.cfg"
+
 . "${SCRIPT_DIR}/utils/common.sh"
 . "${SCRIPT_DIR}/utils/tool.sh"
 
@@ -22,7 +23,7 @@ while true
 do
     clear_terminal
     show_banner
-    show_shortcut
+    show_shortcut "Now you can use '${FREE_INTERNET_COMMAND}' command"
     show_separator
     i=1
     while true; do
