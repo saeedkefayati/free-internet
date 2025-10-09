@@ -88,12 +88,11 @@ check_and_prepare_tool() {
         git -C "$dir" pull || { error "Failed to pull $name"; exit 1; }
     fi
 
+    success "Cloning $name into $dir successfully!"
 
     if [ -f "$dir/install.sh" ]; then
         sh "$dir/install.sh"
     else
         warn "No install.sh found for $name, skipping execution."
     fi
-
-    success "Cloning $name into $dir successfully!"
 }
