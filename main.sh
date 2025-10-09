@@ -23,7 +23,7 @@ while true
 do
     clear_terminal
     show_banner
-    show_shortcut "Now you can use '${FREE_INTERNET_COMMAND}' command"
+    show_centered_text "Now you can use '${FREE_INTERNET_COMMAND}' command"
     show_separator
     i=1
     while true; do

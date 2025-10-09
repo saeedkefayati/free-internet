@@ -86,7 +86,7 @@ show_separator() {
 # -------------------------------
 # Show Shortcut
 # -------------------------------
-show_shortcut() {
+show_centered_text() {
     banner_width=$(wc -L < ./banner.txt)
     
     text_to_center="$1"
