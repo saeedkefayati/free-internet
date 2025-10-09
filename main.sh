@@ -12,6 +12,7 @@ SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 . "${SCRIPT_DIR}/config.cfg"
 . "${SCRIPT_DIR}/utils/common.sh"
+. "${SCRIPT_DIR}/utils/tool.sh"
 
 
 # -------------------------------
