@@ -32,11 +32,7 @@ Free and Open Internet for All
 
 1. Install Dependencies<br/>
 ```bash
-  opkg install git
-```
-
-```bash
-  opkg install git-http
+  opkg install git git-http
 ```
 
 
