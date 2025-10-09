@@ -35,6 +35,7 @@ Free and Open Internet for All
   opkg install git git-http
 ```
 
+<br/>
 
 2. Usage with this command<br/>
 - Github:
