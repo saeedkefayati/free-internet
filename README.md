@@ -99,22 +99,22 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 
 ## Module Project
 
-- [Passwall1](https://github.com/saeedkefayati/passwall1)
+- [Passwall1](https://github.com/saeedkefayati/openwrt-passwall1)
 
-- [Passwall2](https://github.com/saeedkefayati/passwall2)
+- [Passwall2](https://github.com/saeedkefayati/openwrt-passwall2)
 
-- [V2rayA](https://github.com/saeedkefayati/v2raya)
+- [V2rayA](https://github.com/saeedkefayati/openwrt-v2raya)
 
 <br/>
 
 ## Features
 
-- Passwall
+- Install Automatic with each OpenWrt release (Snapshot|Release Candidate|Stable|Service|Legacy)
+- Install Automatic with each OpenWrt architecture (x86|ARM 32-bit (ARMv5/6/7)|ARM 64-bit (AArch64)|MIPS 32-bit|MIPS 64-bit|PowerPC|RISC-V 64-bit|LoongArch 64-bit)
 
 <br/>
 
 ## Roadmap
 
-- ~~Passwall~~
 - Passwall2
 - V2rayA
