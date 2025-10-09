@@ -21,7 +21,8 @@ while true
 do
     clear_terminal
     show_banner
-
+    show_shortcut
+    show_separator
     i=1
     while true; do
         menu_var_name="MENU_${i}"
@@ -37,7 +38,7 @@ do
     done
     max_items=$((i - 1))
 
-    echo "-----------------------------------------------------"
+    show_separator
     printf "Select option: "
     read choice
 

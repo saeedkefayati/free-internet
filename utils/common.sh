@@ -63,8 +63,37 @@ clear_terminal() {
 show_banner() {
     cat ./banner.txt
     echo ""
-    echo "         Now you can use '${FREE_INTERNET_COMMAND}' command      "
-    echo "-----------------------------------------------------"
+}
+
+
+# -------------------------------
+# Show Separator
+# -------------------------------
+show_separator() {
+    banner_width=$(wc -L < ./banner.txt)
+
+    if [ ! -f "./banner.txt" ]; then
+        error "banner.txt file not found!"
+        exit 1
+    fi
+
+    printf '%.0s-' $(seq 1 $banner_width)
+    echo ""
+}
+
+
+# -------------------------------
+# Show Shortcut
+# -------------------------------
+show_shortcut() {
+    banner_width=$(wc -L < ./banner.txt)
+
+    text="Now you can use '${FREE_INTERNET_COMMAND}' command"
+    text_len=${#text}
+
+    padding=$(( (banner_width - text_len) / 2 ))
+
+    printf "%*s%s\n" "$padding" "" "$text"
 }
 
 
