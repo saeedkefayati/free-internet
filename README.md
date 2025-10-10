@@ -3,7 +3,7 @@
 
 Free and Open Internet for All
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 ![GitHub last commit](https://img.shields.io/github/last-commit/saeedkefayati/free-internet)
 ![GitHub top language](https://img.shields.io/github/languages/top/saeedkefayati/free-internet)
 ![GitHub repo size](https://img.shields.io/github/repo-size/saeedkefayati/free-internet)
