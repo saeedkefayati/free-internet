@@ -28,11 +28,35 @@ Free and Open Internet for All
 </figure>
 
 
+## Features
+
+**Automatic Installation by OpenWrt Type**
+- 🟢 Snapshot 
+- 🟡 Release Candidate  
+- 🔵 Stable  
+- 🧰 Service  
+- ⚫ Legacy  
+
+<br/>
+
+**Supports All Architectures**
+- x86  
+- ARM 32-bit (ARMv5/6/7)  
+- ARM 64-bit (AArch64) 
+- MIPS 32-bit
+- MIPS 64-bit 
+- PowerPC  
+- RISC-V 64-bit 
+- LoongArch 64-bit
+
+
+<br/>
+
 ## Smart Installation (Recommend)
 
 1. Install Dependencies<br/>
 ```bash
-  opkg install git git-http
+opkg install git git-http
 ```
 
 <br/>
@@ -107,14 +131,8 @@ sh <(wget -qO- https://cdn.statically.io/gh/saeedkefayati/free-internet/main/ins
 
 <br/>
 
-## Features
-
-- Install Automatic with each OpenWrt release (Snapshot|Release Candidate|Stable|Service|Legacy)
-- Install Automatic with each OpenWrt architecture (x86|ARM 32-bit (ARMv5/6/7)|ARM 64-bit (AArch64)|MIPS 32-bit|MIPS 64-bit|PowerPC|RISC-V 64-bit|LoongArch 64-bit)
-
-<br/>
-
 ## Roadmap
 
-- Passwall2
+- ~~Passwall1~~
+- ~~Passwall2~~
 - V2rayA
