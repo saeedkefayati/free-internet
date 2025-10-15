@@ -25,39 +25,33 @@ do
     show_banner
     show_centered_text "Now you can use '${FREE_INTERNET_COMMAND}' command"
     show_separator
-    i=1
-    while true; do
-        menu_var_name="MENU_${i}"
-        eval "menu_item_full=\"\${$menu_var_name}\""
+    
+    menu_items=$(grep '^MENU_' "${SCRIPT_DIR}/config.cfg" | grep -v '^MENU_0')
+    exit_item=$(grep '^MENU_0' "${SCRIPT_DIR}/config.cfg")
 
-        if [ -n "$menu_item_full" ]; then
-            menu_text="${menu_item_full%%|*}"
-            echo "$i) $menu_text"
-            i=$((i + 1))
-        else
-            break
+    all_items=$(printf "%s\n%s" "$menu_items" "$exit_item")
+
+    echo "$all_items" | while IFS= read -r line; do
+        if [ -n "$line" ]; then
+            # Extract the number
+            num=$(echo "$line" | cut -d'=' -f1 | cut -d'_' -f2)
+            # Extract the menu text
+            text=$(echo "$line" | cut -d'=' -f2 | tr -d '"' | cut -d'|' -f1)
+            echo "${num}) $text"
         fi
     done
-    max_items=$((i - 1))
+
 
     show_separator
     printf "Select option: "
     read choice
 
-    if [ "$choice" -ge 1 ] && [ "$choice" -le "$max_items" ] 2>/dev/null; then
-        menu_var_name="MENU_${choice}"
-        eval "menu_item_full=\"\${$menu_var_name}\""
-        action_to_run="${menu_item_full#*|}"
-
-        if [ "$action_to_run" != "$menu_item_full" ]; then
-            success "Executing: $action_to_run"
-            
-            eval "$action_to_run"
-            sleep 1
-        else
-            error "No action defined for this menu item! (Missing '|')"
-            sleep 1
-        fi
+    eval selected=\$MENU_${choice}
+    if [ -n "$selected" ]; then
+        action_to_run=$(echo "$selected" | cut -d'|' -f2)
+        
+        eval "$action_to_run"
+        sleep 1
     else
         error "Invalid choice!"
         sleep 1
